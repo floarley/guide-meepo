@@ -2,194 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гайд на Meepo от Floarley</title>
     <style>
-        :root {
-            --bg-color: #1c1212;
-            --card-bg: #2b1f1f;
-            --accent-color: #9c2a2a;
-            --text-color: #e5d5d5;
-            --text-muted: #a39393;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(180deg, #3d1414 0%, var(--bg-color) 100%);
-            border-bottom: 2px solid var(--accent-color);
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-        header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .section {
-            background-color: var(--card-bg);
-            border-left: 4px solid var(--accent-color);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        h2 {
-            color: #fff;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-        ol {
-            list-style: none;
-            counter-reset: step-counter;
-        }
-        ol li {
-            counter-increment: step-counter;
-            margin-bottom: 12px;
-            padding-left: 30px;
-            position: relative;
-        }
-        ol li::before {
-            content: counter(step-counter) ".";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        ul {
-            list-style: none;
-        }
-        ul li {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-        }
-        ul li::before {
-            content: "•";
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -4px;
-        }
-        .item-build {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .item-card {
-            background-color: rgba(0,0,0,0.2);
-            padding: 15px;
-            border-radius: 4px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .item-card h3 {
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-        .item-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--card-bg);
-            margin-top: 5px;
-        }
+        body { background: #110909; color: #d1c4c4; font-family: sans-serif; padding: 20px; }
+        .wrapper { max-width: 800px; margin: 0 auto; }
+        header, section { background: #1a0f0f; padding: 15px; margin-bottom: 15px; border: 1px solid #333; }
+        h1, h2 { color: #fff; }
+        .items { display: flex; flex-wrap: wrap; gap: 10px; }
+        .item { background: #241414; padding: 10px; flex: 1 1 200px; border-left: 2px solid #821c1c; }
+        .gametrye {background:#241414; padding: 10px; flex: 1 1 200px; border-left: 2px solid #821c1c;}
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Подробный гайд на Meepo </h1>
-        <p>Floarley веб-проект: гайд на Meepo (основан на практике в 2000 игр)</p>
-    </header>
-
-    <div class="container">
-        <!-- О герое -->
-        <div class="section">
-            <h2>О герое Meepo</h2>
+    <div class="wrapper">
+        <header><h1>Гайд на Meepo от Floarley</h1></header>
+        <section>
+            <h2>О герое</h2>
             <p>Meepo — один из самых сложных и также сильных героев в Dota 2. Его главная особенность — разделение на несколько полноценных клонов. Герой требует идеального макроконтроля, быстрой реакции и умения быстро фармить всю карту одновременно.</p>
-        </div>
-        <div class="section">
-            <h2>Главная комбинация (Blink + Poof)</h2>
-            <ul>
-                <li><strong>Всё что вам надо:</strong> Выделить мипо на которого хочешь блинкануться всеми мипарями перед блинком<i>Poof</i> Перед тем как блинкануться жмите cntrl+poof прождите секунду и блинкайтесь (с левым талантом на 25 уровне не ждите эту секунду а сразу блинкайтесь).</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Сборка на meepo(очередность по слотам) </h2>
-            <div class="item-build">
-                <div class="item-card">
-                    <strong>Power Treads</strong>
-                    <span>Статы и скорость атаки для всех клонов.</span>
-                </div>
-                <div class="item-card">
-                    <strong>Sange and Yasha</strong>
-                    <span>Хорошие статы и приятные баффы(бонус к вампиризму работает на пассивку).</span>
-                </div>
-                <div class="item-card">
-                    <strong>Aghanim Scepter</strong>
-                    <span>Даёт важную и сильную способность mega-meepo хороший сейв и плотность(во время действия агана бафается сетка и пуф).</span>
-                </div>
-                <div class="item-card">
-                    <strong>Aghanim's Shard</strong>
-                    <span>Дает важнейший навык спасения клонов (Dig).</span>
-                </div>
-                    <div class="item-card">
-                    <strong>Blink dagger</strong>
-                    <span>Даёт хорошую мобильность в файтах и возможность ломать позиционку врагов.</span>
-                </div>
-                                <div class="item-card">
-                    <strong>Eye of skadi</strong>
-                    <span>Очень хорошие статы приятно собирается и контрит хп регены и замедляет аттак спид.</span>
-                </div>
-                                <div class="item-card">
-                    <strong>Scythe of vyse или butterfly</strong>
-                    <span>Оба предмета хороши но выбор слота важен! Хекс покупаем против таких героев с ескейпами как пак шторм. Бабочку покупаем против героев которые бьют с руки.</span>
-                </div>
+        </section>
+        <section>
+            <h2></p>Сборка</p></h2>
+            <div class="items">
+                <div class="item"><strong>Power Treads</strong> Статы и скорость атаки для всех клонов.</div>
+                <div class="item"><strong>Sange and Yasha</strong> Хорошие статы и приятные баффы(бонус к вампиризму работает на пассивку).</div>
+                <div class="item"><strong>Aghanim Scepter</strong> Даёт важную и сильную способность mega-meepo хороший сейв и плотность(во время действия агана бафается сетка и пуф).</div>
+                <div class="item"><strong>Aghanim's Shard</strong> Дает важнейший навык спасения клонов (Dig).</div>
+                <div class="item"><strong>Blink dagger</strong> Даёт хорошую мобильность в файтах и возможность ломать позиционку врагов.</div>
+                <div class="item"><stong>Eye of skadi</stong> Очень хорошие статы приятно собирается и контрит хп регены и замедляет аттак спид.</div>
+                <div class="item"><strong>Scythe of vyse</strong> или <strong>butterfly</strong> Оба предмета хороши но выбор слота важен! Хекс покупаем против таких героев с ескейпами как пак шторм. Бабочку покупаем против героев которые бьют с руки.</div>
             </div>
-        </div>
-        <div class="section">
-            <h2>Важные фишки за игры на Meepo</h2>
-            <ul>
-                <li><strong>Как забиндить мипарей?: </strong>Первое что вам надо - зайти в раздел CONTROL GROUPS в настройках и настроить клавиши на какие кнопки ты хочешь забиндить мипарей. Следующий ваш шаг - зайти в пробу героя Meepo и выделить мипарей которых вы хотите забиндить зажать cntrl+кнопка на которую хочешь забиндить </li>
-                <li><strong>Не забывайте о стаках!: </strong> Во время лайнинга следите за таймером когда у вас появляется третий уровень и вы видите 2:40, 3:40, 5:40 и тд подводите второго мипо к кемпу и свободно стакайте забирая их пуфами (не забывайте переключать пт на интеллект перед применением poof дабы сэкономить ману)</li>
-                <li><strong>Контр пики: </strong> Не берите Meepo против Earthshaker, Sven, Troll warlord, Medusa, Elder titan, Huskar.</li>
-            </ul>
-        </div>
+            <selection>
+    <h2>Фишки игры за Meepo</h2>
+    <div class="items">
+        <div class="item"><strong>1. Как забиндить мипарей?:</strong> Первое что вам надо - зайти в раздел CONTROL GROUPS в настройках и настроить клавиши на какие кнопки ты хочешь забиндить мипарей. Следующий ваш шаг - зайти в пробу героя Meepo и выделить мипарей которых вы хотите забиндить зажать cntrl+кнопка на которую хочешь забиндить</div>
+        <div class="item"><strong>2. Не забывайте о стаках!:</strong> Во время лайнинга следите за таймером когда у вас появляется третий уровень и вы видите 2:40, 3:40, 5:40 и тд подводите второго мипо к кемпу и свободно стакайте забирая их пуфами (не забывайте переключать пт на интеллект перед применением poof дабы сэкономить ману)</div>
+        <div class="item"><strong>3. Контр пики:</strong> Не берите Meepo против Earthshaker, Sven, Troll warlord, Medusa, Elder titan, Huskar.</div>
     </div>
-    <footer>
-        <p> Floarley преднозначен для портфолио.</p>
-    </footer>
-</body>
+</section>
 </html>
